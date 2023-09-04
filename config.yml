@@ -1,0 +1,12 @@
+version: 2.1
+
+jobs:
+  build:
+    docker:
+      - docker build -t image1 -f day-14/simple-python-app/Dockerfile .
+
+
+workflows:
+  build_now:
+    jobs:
+      -build
